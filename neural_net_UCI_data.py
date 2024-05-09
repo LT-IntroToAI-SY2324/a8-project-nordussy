@@ -11,7 +11,8 @@ def parse_line(line: str) -> Tuple[List[float], List[float]]:
     Returns:
         tuple of input list and output list
     """
-    tokens = line.split(",")
+
+    tokens = line.strip().split(",")
     out = int(tokens[len(tokens) - 1])
     output = [0.1 if out == 0 else 0.2 if out == 1 else 0.3 if out == 2 else 0.4 if out == 3 else 0.5 if out == 4 else 0.6 if out == 5 else 0.7 if out == 6 else 0.8 if out == 7 else 0.9 if out == 8 else 1]
 
